@@ -22,37 +22,26 @@
 
 <main>
   <h2>🔧 Projects</h2>
-  <p>Here are some of the projects I’ve worked on in cybersecurity, privacy, and software development.</p>
+  <p>Here are some of the projects I have worked on in as part of my studies in cybersecurity.</p>
 
-  <section>
-    <h3>🛡️ SSH Protocol Modeling using Tamarin</h3>
-    <p>
-      Formalized SSH protocol in the Tamarin prover to verify security properties under adversarial conditions.
-      Focused on key re-exchange, encryption/MAC negotiation, and packet sequence modeling.
-    </p>
-    <p><strong>Tools:</strong> Tamarin Prover, Formal Methods</p>
-    <!-- Optional link -->
-    <!-- <p><a href="https://github.com/your-repo-link">View on GitHub</a></p> -->
-  </section>
-
-  <section>
-    <h3>📈 Feedback-Directed Input Generation with Fandango</h3>
-    <p>
-      Developed a framework integrating Fandango with a performance analysis tool for guided test input generation.
-      Applied to sorting algorithms and HTML-to-PDF conversion scenarios.
-    </p>
-    <p><strong>Tools:</strong> Fandango, Python, WeasyPrint</p>
-  </section>
-
-  <section>
-    <h3>🔍 Web Application Vulnerability Scanner</h3>
-    <p>
-      Created a lightweight tool to scan small web applications for common vulnerabilities like XSS and SQL Injection using Selenium and Python.
-    </p>
-    <p><strong>Tools:</strong> Selenium, Python, OWASP Top 10</p>
-    <p><a href="https://github.com/minimthomas93/web-vuln-scanner">View on GitHub</a></p>
-  </section>
-
+  <section style="margin-bottom: 40px;">
+  <h3>🔐 Tamarin Model of IKEv2 Protocol</h3>
+  <p>
+    The Internet Key Exchange Protocol Version 2 (IKEv2) is used by IPsec to secure traffic on the network layer (see IKEv2 protocol execution flow). 
+    This project involved formally modeling the IKEv2 key exchange mechanism using the 
+    <a href="https://tamarin-prover.github.io/" target="_blank">Tamarin Prover</a>.
+  </p>
+  <ul>
+    <li>🔑 Modeled initialization of key pairs and identities with role-switching (Initiator/Responder).</li>
+    <li>🔄 Implemented the full IKEv2 protocol with restrictions to prevent self key exchange.</li>
+    <li>🔐 Enforced single session per key pair.</li>
+    <li>✅ Verified successful execution through sanity checks.</li>
+    <li>📜 Formulated six agreement lemmas, including message and transcript agreements.</li>
+    <li>🔒 Proved key secrecy for all exchanged keys.</li>
+    <li>📊 Ran simulations with multiple sessions, analyzed lemma proofs, and documented discovered attacks (if any).</li>
+  </ul>
+</section>
+<p><a href="https://github.com/YOUR_USERNAME/ikev2-tamarin" target="_blank">View Source Code on GitHub</a></p>
   <!-- Add more sections here -->
 </main>
 
