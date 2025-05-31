@@ -27,10 +27,35 @@
   <section style="margin-bottom: 40px;">
   <h3>🔐 Tamarin Model of IKEv2 Protocol</h3>
   <p>
-    The Internet Key Exchange Protocol Version 2 (IKEv2) is used by IPsec to secure traffic on the network layer (see IKEv2 protocol execution flow). 
+    The Internet Key Exchange Protocol Version 2 (IKEv2) is used by IPsec to secure traffic on the network layer (see Figure 1). 
     This project involved formally modeling the IKEv2 key exchange mechanism using the 
     <a href="https://tamarin-prover.github.io/" target="_blank">Tamarin Prover</a>.
   </p>
+    <figure style="text-align: center;">
+    <img src="ikev2_diagram.png" alt="IKEv2 Protocol Diagram" style="max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 8px; padding: 5px;" />
+    <figcaption style="font-size: 0.9em; color: #666; margin-top: 8px;">
+      Figure 1: IKEv2 protocol Execution Flow
+    </figcaption>
+  </figure>
+  <h4>📘 Notation</h4>
+  <div style="background-color: #f5f5f5; padding: 15px 20px; border-left: 5px solid #888; border-radius: 8px; font-size: 0.95em; line-height: 1.6;">
+    <ul>
+      <li><strong>INIT</strong> and <strong>AUTH</strong> are identifier strings.</li>
+      <li><strong>SA<sub>i</sub></strong> and <strong>info<sub>i</sub></strong> represent a set of algorithms and meta information, respectively.</li>
+      <li><strong>cookie</strong> is a random value to identify the session later on.</li>
+      <li><strong>x<sub>A</sub></strong> and <strong>x<sub>B</sub></strong> are the Diffie-Hellman shares of the two parties. <strong>g</strong> is a generator.</li>
+      <li><strong>n<sub>i</sub></strong> is a nonce.</li>
+      <li><strong>k</strong> is the shared key computed from the Diffie-Hellman operation <strong>g<sup>x<sub>A</sub>y<sub>B</sub></sup></strong>.</li>
+      <li><strong>k<sub>j</sub></strong> is a key computed as: <code>kdf(k, n<sub>A</sub>, n<sub>B</sub>, j)</code>.</li>
+      <li><strong>transcript<sub>i</sub></strong> is computed by hashing <code>SA<sub>i</sub>, gx<sub>i</sub>, n<sub>i</sub>, info<sub>i</sub>, n<sub>j</sub>, MAC<sub>i</sub></code>, where:</li>
+      <ul style="list-style-type: circle; margin-left: 20px;">
+        <li><code>MAC<sub>i</sub> = MAC(pk<sub>i</sub>, k<sub>3</sub>)</code> for A</li>
+        <li><code>MAC<sub>i</sub> = MAC(pk<sub>i</sub>, k<sub>4</sub>)</code> for B</li>
+      </ul>
+      <li>For <strong>transcript<sub>A</sub></strong>, the <strong>cookie</strong> is added to the first position of the transcript.</li>
+    </ul>
+  </div>
+
   <ul>
     <li>🔑 Modeled initialization of key pairs and identities with role-switching (Initiator/Responder).</li>
     <li>🔄 Implemented the full IKEv2 protocol with restrictions to prevent self key exchange.</li>
