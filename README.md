@@ -32,4 +32,4 @@ Certifications & Training: Verified learning and accomplishments
 If you're interested in collaborating or want to know more about my work, feel free to reach out!
 
 📧 minimthomas93@gmail.com
-🔗 LinkedIn Profile
+🔗 LinkedIn Profile: https://www.linkedin.com/in/minimthomas
