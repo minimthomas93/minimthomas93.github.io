@@ -32,6 +32,38 @@
   <h2>🔧 Projects</h2>
   <p>Here are some of the projects I have worked on in as part of my studies in cybersecurity.</p>
 <section style="margin-bottom: 40px;">
+  <h3>Deloitte Cybersecurity Job Simulation</h3>
+  <p>
+  <strong>Simulated Role:</strong> Cybersecurity Analyst
+  </p>
+  <p>
+    As part of Deloitte’s Cybersecurity Job Simulation, I investigated a suspected security breach involving an operational dashboard built for Daikibo Industrials. The client raised concerns following a major news leak and an unexpected production shutdown, suspecting their internal dashboard had been compromised.
+  </p
+  <strong>Objectives:</strong> Cybersecurity Analyst
+  <ul>
+      <li>Determine if a direct cyberattack from outside the organization was possible without VPN access.</li>
+      <li>Analyze a time-filtered web activity log to detect any suspicious patterns or requests.</li>
+      </ul>
+  <strong>What I did:</strong>
+  <ul>
+      <li>Downloaded and analyzed the provided access logs using Visual Studio Code for efficient inspection.</li>
+      <li>Carefully reconstructed user behavior by examining the flow of requests:
+Login → Dashboard Resource Loads (CSS/JS/Images) → API Requests for Machine Statuses</li>
+      <li>Performed IP-wise behavioral tracking to distinguish human interaction from automated patterns.</li>
+      </ul>
+  
+  <strong>What I Observed:</strong>
+  <ul>
+      <li>Identified anomalous behavior from a particular IP address, which consistently made identical requests to API every hour - down to the second.</li>
+      <li>Determined this pattern could not be human-driven due to its unnatural precision with no page resources being loaded </li>
+      <li>In the original scope of the project, the dashboard is living in Daikibo's intranet. The only remote access to it would be through VPN tunnelling. So no attacker has direct access to the status dashboard.</li>
+      </ul>
+  <p><strong>Technologies:</strong> · Understanding attack scenario · Log Analysis · Pattern recognition · Communication </p>
+  🔗<a href="https://github.com/minimthomas93/certifications.html" target="_blank">View Certificate</a>
+</section>
+
+  
+<section style="margin-bottom: 40px;">
   <h3>📘 Master's Thesis (In Progress)</h3>
   <p>
     <strong>Title:</strong> Coreografa : Feedback-directed input generation and analysis Framework
