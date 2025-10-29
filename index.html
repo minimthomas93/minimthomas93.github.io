@@ -1,272 +1,119 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Home | Mini Mariya Thomas</title>
-  <meta name="description" content="Cybersecurity & QA portfolio — Mini Mariya Thomas">
-  <link href="https://cdn.jsdelivr.net/npm/simpledotcss/simple.min.css" rel="stylesheet" />
-  <style>
-    :root{
-      --bg-dark: #06080a;
-      --panel-dark: #0f1417;
-      --muted: #9aa6b2;
-      --accent: #2ea3ff;
-      --card-border: #263036;
-      --header-border: #e6e6e6;
-      --white: #ffffff;
-      --black: #0b0b0b;
-    }
 
-    body{
-      margin:0;
-      min-height:100vh;
-      background: var(--bg-dark);
-      color: var(--white);
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      line-height:1.5;
-    }
 
-    /* Header: white background, dark text */
-    header.site-header{
-      background: var(--white);
-      color: var(--black);
-      border-bottom:1px solid var(--header-border);
-      padding: 18px 20px;
-      position:sticky;
-      top:0;
-      z-index:100;
-    }
-    header .header-inner{
-      max-width:1100px;
-      margin:0 auto;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:16px;
-    }
-    header h1{
-      margin:0;
-      font-size:1.25rem;
-      letter-spacing:0.2px;
-    }
-    header .tagline{
-      font-size:0.92rem;
-      color:var(--muted);
-      margin-left:8px;
-    }
 
-    /* Nav - visible dark labels on white */
-    nav.site-nav{
-      display:flex;
-      gap:8px;
-      align-items:center;
-    }
-    nav.site-nav a{
-      color:var(--black);
-      background:transparent;
-      padding:8px 12px;
-      border-radius:8px;
-      border:1px solid transparent;
-      text-decoration:none;
-      font-weight:600;
-    }
-    nav.site-nav a:hover{
-      background: #f3f6f8;
-      border-color: #e6e9eb;
-    }
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home | Mini Mariya Thomas</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Home" />
+<meta name="author" content="Mini Mariya Thomas" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Cybersecurity Master’s Student at Saarland University" />
+<meta property="og:description" content="Cybersecurity Master’s Student at Saarland University" />
+<link rel="canonical" href="https://minimthomas93.github.io/" />
+<meta property="og:url" content="https://minimthomas93.github.io/" />
+<meta property="og:site_name" content="Mini Mariya Thomas" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Home" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"Mini Mariya Thomas"},"description":"Cybersecurity Master’s Student at Saarland University","headline":"Home","name":"Mini Mariya Thomas","url":"https://minimthomas93.github.io/"}</script>
 
-    /* Main layout: sidebar left, content right */
-    main.wrapper{
-      max-width:1100px;
-      margin: 28px auto;
-      padding: 0 18px 50px;
-      display:grid;
-      grid-template-columns: 300px 1fr;
-      gap:28px;
-      align-items:start;
-    }
-
-    /* Sidebar card */
-    .sidebar{
-      background: var(--panel-dark);
-      border:1px solid var(--card-border);
-      padding:18px;
-      border-radius:12px;
-    }
-    .sidebar img{
-      width:100%;
-      border-radius:10px;
-      display:block;
-      margin-bottom:14px;
-      object-fit:cover;
-    }
-    .sidebar h2{
-      margin:0 0 8px 0;
-      color:var(--white);
-      font-size:1.05rem;
-    }
-    .sidebar p.short{
-      color:var(--muted);
-      margin:0 0 12px 0;
-      font-size:0.95rem;
-    }
-    .contact-list{
-      display:flex;
-      flex-direction:column;
-      gap:6px;
-      margin-top:8px;
-    }
-    .contact-list a{ color: var(--accent); text-decoration:none; font-weight:600; }
-    .quick-links{
-      margin-top:12px;
-      display:flex;
-      gap:8px;
-      flex-wrap:wrap;
-    }
-    .quick-links a{
-      background:#0b1620;
-      color:var(--white);
-      padding:6px 10px;
-      border-radius:8px;
-      font-size:0.9rem;
-      text-decoration:none;
-      border:1px solid var(--card-border);
-    }
-    .quick-links a:hover{ transform:translateY(-2px); }
-
-    /* Right content area */
-    .content-col{
-      display:flex;
-      flex-direction:column;
-      gap:18px;
-    }
-    .hero-summary{
-      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-      border:1px solid var(--card-border);
-      padding:18px;
-      border-radius:12px;
-    }
-    .hero-summary h2{ margin:0 0 6px 0; color:var(--accent); }
-    .hero-summary p{ margin:0; color:var(--muted); }
-
-    /* Cards grid */
-    .cards{
-      display:grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap:18px;
-    }
-    .card{
-      background: var(--panel-dark);
-      border:1px solid var(--card-border);
-      border-radius:12px;
-      padding:16px;
-    }
-    .card h3{ margin-top:0; color:var(--accent); }
-    .card ul{ margin:8px 0 0 18px; color:var(--white); }
-    .card a{ color:var(--accent); text-decoration:none; font-weight:600; }
-    .muted{ color:var(--muted); font-size:0.95rem; }
-
-    footer{
-      text-align:center;
-      color:var(--muted);
-      padding:28px 10px;
-      border-top:1px solid rgba(255,255,255,0.03);
-      margin-top:40px;
-    }
-
-    /* Responsive */
-    @media (max-width:920px){
-      main.wrapper{ grid-template-columns: 1fr; padding: 0 14px; }
-      .sidebar{ order: -1; } /* show sidebar on top for mobile */
-    }
-  </style>
-</head>
+<link href="https://cdn.jsdelivr.net/npm/simpledotcss/simple.min.css" rel="stylesheet" /><link type="application/atom+xml" rel="alternate" href="https://minimthomas93.github.io/feed.xml" title="Mini Mariya Thomas" /></head>
 <body>
-  <header class="site-header" role="banner">
-    <div class="header-inner">
-      <div style="display:flex;align-items:center;">
-        <h1>Mini Mariya Thomas</h1>
-        <div class="tagline"> — Cybersecurity & Quality Assurance</div>
+<header class="site-header" role="banner" style="background-color: #2f2f2f; color: white; padding: 20px 0;"> <div class="wrapper" style="text-align: center;">
+
+    <!-- Centered Name -->
+    <h1 class="site-title" style="font-size: 2rem; margin-bottom: 20px; color: #ffffff;">
+      Mini Mariya Thomas
+    </h1>
+    <em style="font-size: 1rem; color: #dddddd;">Bridging the gap between quality software and secure systems</em>
+
+    <!-- Centered Tabs with background -->
+    <nav class="site-nav">
+      <div class="trigger" style="display: inline-flex; gap: 16px; flex-wrap: wrap; justify-content: center;">
+        <a class="page-link" href="/" style="background-color: #3a3a5a; color: white; padding: 8px 16px; border-radius: 6px; text-decoration: none; transition: background 0.3s;">Home</a>
+        <a class="page-link" href="/projects.html" style="background-color: #3a3a5a; color: white; padding: 8px 16px; border-radius: 6px; text-decoration: none; transition: background 0.3s;">Projects</a>
+        <a class="page-link" href="/experience.html" style="background-color: #3a3a5a; color: white; padding: 8px 16px; border-radius: 6px; text-decoration: none; transition: background 0.3s;">Experience</a>
+        <a class="page-link" href="/skills.html" style="background-color: #3a3a5a; color: white; padding: 8px 16px; border-radius: 6px; text-decoration: none; transition: background 0.3s;">Skills</a>
+        <a class="page-link" href="/certifications.html" style="background-color: #3a3a5a; color: white; padding: 8px 16px; border-radius: 6px; text-decoration: none; transition: background 0.3s;">Certifications & Trainings</a>
       </div>
+    </nav>
+  </div>
+</header>
+  
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div style="display: flex; align-items: flex-start; gap: 40px; margin-top: 20px;">
 
-      <nav class="site-nav" role="navigation" aria-label="Main navigation">
-        <a href="/">Home</a>
-        <a href="/projects.html">Projects</a>
-        <a href="/experience.html">Experience</a>
-        <a href="/skills.html">Skills</a>
-        <a href="/certifications.html">Certifications</a>
-      </nav>
-    </div>
-  </header>
+  <!-- LEFT: Profile image -->
+  <div style="min-width: 200px;">
+    <img src="mini_photo1.jpg" alt="Mini Mariya Thomas" width="200" style="border-radius: 12px;" />
+  </div>
 
-  <main class="wrapper" role="main">
-    <!-- LEFT: Sidebar -->
-    <aside class="sidebar" aria-label="Profile sidebar">
-      <img src="mini_photo1.jpg" alt="Photo of Mini Mariya Thomas">
-      <h2>Mini Mariya Thomas</h2>
-      <p class="short">Cybersecurity MSc student & QA professional with 7 years of software testing experience. I bridge quality and security to build reliable products.</p>
+  <!-- RIGHT: Info and content -->
+  <div style="flex: 1;">
+  <p>
+  Cybersecurity enthusiast with 7 years of experience in software testing. <br />
+  My experience in both QA and cybersecurity allows me to assess products not only for quality but also for security. <br />
+  I aim to combine these skills to help create safe and reliable products for customers.<br />
+  <br/>
+  📍 Saarbrücken, Saarland, Germany<br />
+  📧 <a href="mailto:minimthomas93@gmail.com">minimthomas93@gmail.com</a>
+  🔗 <a href="https://linkedin.com/in/minimthomas">LinkedIn</a></p>
 
-      <div class="contact-list">
-        <div class="muted">📍 Saarbrücken, Germany</div>
-        <div><strong>✉️</strong> <a href="mailto:minimthomas93@gmail.com">minimthomas93@gmail.com</a></div>
-        <div><strong>🔗</strong> <a href="https://linkedin.com/in/minimthomas" target="_blank" rel="noopener">LinkedIn</a></div>
+<section style="margin-bottom: 40px;">
+<h3>👩🏻‍💻 Professional Experience</h3>
+<ul>
+<li>Thesis Student at CISPA (2025- present)</li><br />
+<li>Working Student at Carl ZEISS AG (2023-2024).
+<a href="https://www.zeiss.de/vision-care/home.html" target="_blank">Carl Zeiss Vision GmbH</a>
+</li><br />
+<li>QA in various companies across India (2015-2023)</li><br />
+
+You can find more details about my work experience, roles, responsibilities, and projects on the 
+<a class="page-link" href="/experience.html">Experience</a> page.
+
+</ul>
+</section>
+
+<section style="margin-bottom: 40px;">
+<h3>🎓 Academic Background</h3>
+<ul>
+<li>I am currently pursuing M Sc. Cybersecurity at 
+<a href="https://www.uni-saarland.de/en/home.html" target="_blank">Saarland University</a>
+  
+You can find details about my thesis and academic projects on the 
+<a class="page-link" href="/projects.html">Projects</a> page.</li><br />
+<li>Hold an MBA in Informatics from 
+<a href="https://sde.b-u.ac.in/" target="_blank">Bharathiar University.</a></li><br /> 
+<li>Completed Bachelor’s degree in Electronics and Communication Engineering from 
+<a href="https://www.sist.in/" target="_blank">Sarabhai Institute of Science and Technology</a>.</li>
+</ul>
+</section>
+
+<section style="margin-bottom: 40px;">
+<h3>✍ Personal Interests </h3>
+  Outside academia,
+  <ul>
+  <li>I am an aspiring writer. I write my thoughts on social media and magazines.</li><br />
+  <li>I would like to read self help books and novels in my free time.</li><br />
+  <li>I enjoy learning new languages through gaming applications like Duolingo.</li><br />
+  <li>I enjoy watching or listening interviews, podcasts, and various talks which give new insights on various topics and people.</li><br />
+  </ul>
+</section>
+
+  </div>
+</div>
+
       </div>
-
-      <div style="margin-top:12px;">
-        <div class="muted" style="margin-bottom:8px;">Quick links</div>
-        <div class="quick-links">
-          <a href="/projects.html">Projects</a>
-          <a href="/experience.html">Experience</a>
-          <a href="/skills.html">Skills</a>
-          <a href="/certifications.html">Certifications</a>
-        </div>
-      </div>
-    </aside>
-
-    <!-- RIGHT: Content -->
-    <section class="content-col">
-      <div class="hero-summary" aria-labelledby="hero-heading">
-        <h2 id="hero-heading">Cybersecurity Enthusiast & QA Professional</h2>
-        <p class="muted">I bring practical QA experience and research-focused cybersecurity skills to help teams deliver secure, high-quality software. Currently pursuing an M.Sc. in Cybersecurity at Saarland University and working on a thesis at CISPA.</p>
-      </div>
-
-      <div class="cards" aria-label="Main content cards">
-        <article class="card" aria-labelledby="exp">
-          <h3 id="exp">👩🏻‍💻 Professional Experience</h3>
-          <ul>
-            <li><strong>Thesis Student — CISPA</strong> (2025 — present) <div class="muted">Research on feedback-directed input generation & performance analysis</div></li>
-            <li style="margin-top:8px;"><strong>Working Student — Carl ZEISS AG</strong> (2023 — 2024)</li>
-            <li style="margin-top:8px;"><strong>QA Engineer</strong> across multiple companies (2015 — 2023)</li>
-          </ul>
-          <p style="margin-top:10px;">More details on the <a href="/experience.html">Experience page</a>.</p>
-        </article>
-
-        <article class="card" aria-labelledby="edu">
-          <h3 id="edu">🎓 Academic Background</h3>
-          <ul>
-            <li>M.Sc. Cybersecurity — <a href="https://www.uni-saarland.de/en/home.html" target="_blank" rel="noopener">Saarland University</a></li>
-            <li>MBA in Informatics — <a href="https://sde.b-u.ac.in/" target="_blank" rel="noopener">Bharathiar University</a></li>
-            <li>B.E. Electronics & Communication — <a href="https://www.sist.in/" target="_blank" rel="noopener">SIST</a></li>
-          </ul>
-          <p class="muted" style="margin-top:8px;">Thesis and project descriptions on <a href="/projects.html">Projects</a>.</p>
-        </article>
-
-        <article class="card" aria-labelledby="interest">
-          <h3 id="interest">✍ Personal Interests</h3>
-          <ul>
-            <li>Writing articles for online magazines</li>
-            <li>Reading self-help & fiction</li>
-            <li>Learning languages via apps like Duolingo</li>
-            <li>Listening to tech interviews & podcasts</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-  </main>
-
+    </main>
   <footer>
-    © 2025 Mini Mariya Thomas | <a href="mailto:minimthomas93@gmail.com">minimthomas93@gmail.com</a>
-  </footer>
+  <p>© 2025 Mini Mariya Thomas | <a href="mailto:minimthomas93@gmail.com">minimthomas93@gmail.com</a></p>
+</footer>
 </body>
+
 </html>
