@@ -1,3 +1,4 @@
+#Created and executed the file in power shell
 
 import requests 
 import sys 
@@ -10,3 +11,4 @@ for dir in directories:
         pass
     else:
         print("Valid directory:" ,dir_enum)
+
