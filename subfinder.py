@@ -9,7 +9,7 @@ Script for enumerate subdomain through a wordlist subdomains.txt:
 import requests     # used to send HTTP requests (like GET, POST) to web servers.
 import sys          # allows access to command-line arguments and system-specific parameters.
 
-sub_list = open("subdomains.txt").read() 
+sub_list = open("wordlists.txt").read() 
 subdoms = sub_list.splitlines()         # removing the newline characters (\n), make to list of  individual lines
                                                                        
 for sub in subdoms:
@@ -37,4 +37,5 @@ We might get output like:
 
 Valid domain: http://www.example.com (if it exists)
 Valid domain: http://mail.example.com (if it exists)
+
 '''
