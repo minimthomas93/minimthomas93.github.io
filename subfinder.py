@@ -1,3 +1,4 @@
+#Created and executed the file in power shell
 '''
 Script for enumerate subdomain through a wordlist subdomains.txt:
 
@@ -39,3 +40,4 @@ Valid domain: http://www.example.com (if it exists)
 Valid domain: http://mail.example.com (if it exists)
 
 '''
+
