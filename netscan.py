@@ -1,3 +1,5 @@
+#Created and executed the file in power shell
+
 from scapy.all import *                     #scapy to create, manipulate, update, send and receive packets
 
 interface = "eth0"                          #which interface use to send packets
@@ -18,4 +20,5 @@ apt install python3-scapy
 touch arp_scan.py
 nano arp_scan.py
 python3 arp_scan.py
+
 '''
