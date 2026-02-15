@@ -6,6 +6,7 @@
   <title>Projects | Mini Mariya Thomas</title>
   <link href="https://cdn.jsdelivr.net/npm/simpledotcss/simple.min.css" rel="stylesheet" />
 </head>
+	
 <body>
 <header class="site-header" role="banner" style="background-color: #2f2f2f; color: white; padding: 20px 0;">
   <div class="wrapper" style="text-align: center;">
@@ -30,14 +31,43 @@
 </header>
 <main>
   <h2>🔧 Projects</h2>
-  <p>Here are some of the projects I have worked in cybersecurity and testing</p>
+
+<div class="tabs">
+  <button class="tab active" onclick="showTab('all')">All Projects</button>
+  <button class="tab" onclick="showTab('testing')">Testing Projects</button>
+  <button class="tab" onclick="showTab('security')">Cybersecurity Projects</button>
+</div>
+
+	<style>
+.tabs {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+
+.tab {
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: #f5f5f5;
+  cursor: pointer;
+}
+
+.tab.active {
+  background: #3a3a5a;
+  color: white;
+  border-color: #3a3a5a;
+}
+</style>
 
   <hr>
 
   <!-- Collapsible Project Sections -->
 
-	  <details id="thesis">
-    <summary> Master’s Thesis: Coreografa - An automation testing Framework</summary>
+	  <details data-category="testing">
+    <summary> Coreografa - An automation testing Framework for performance comparison</summary>
     <p>Developing a feedback-directed framework to simulate adversarial input generation and uncover system vulnerabilities to support efficient and scalable penetration testing and performance testing processes.</p>
     <ul>
       <li>Automates grammar-based input generation.</li>
@@ -49,8 +79,8 @@
     🔗 <i>Work is in progress - Link will provide later</i>
   </details>
 
-	    <details id="constraint">
-    <summary> Automation using Selenium</summary>
+	    <details data-category="testing">
+    <summary> Automation testing-  Selenium with Java </summary>
     <p>Automated multiple pages of the application (https://groceryapp.uniqassosiates.com) using Java and Selenium </p> 
     <p>Pushed the latest updates to GitHub for version control</p>
     <p>Integrated automated test execution into CI/CD pipelines using Jenkins.</p>
@@ -58,21 +88,21 @@
     🔗 <a href="https://github.com/minimthomas93/GroceryApplication" target="_blank">View Code on GitHub</a>
   </details>
 
-	  <details id="sqlite">
+	  <details data-category="testing">
     <summary> Grammar-Based Blackbox Fuzzer for SQLite</summary>
     <p>Developed grammar-based fuzzer for SQLite to test SQL coverage using Docker and coverage reports.</p>
     <p><strong>Technologies:</strong> Python · SQLite · Docker · Coverage Analysis</p>
     🔗 <a href="https://github.com/minimthomas93/sqlite_fuzzer.git" target="_blank">View Code on GitHub</a>
   </details>
 
-  <details id="constraint">
+  <details data-category="testing security">
     <summary> Automated Grammar-Based Constraint Learning</summary>
     <p>Built a system to learn input constraints from positive and negative sample sets using formal grammars.</p>
     <p><strong>Technologies:</strong> Python · AST Parsing · Blackbox Oracle Testing</p>
     🔗 <a href="https://github.com/minimthomas93/constraint_learning.git" target="_blank">View Code on GitHub</a>
   </details>
 
-	<details id="powershell">
+	<details data-category="security">
     <summary>Powershell Tasks</summary>
     <b><u>Challenge 1: Find Listening Ports</u></b>
 	    <ul>
@@ -92,7 +122,7 @@
 		🔗 <a href="https://github.com/minimthomas93/powershell_scripts.git" target="_blank">View Scripts</a>
 	</details>
 
-    <details id="python-programs">
+    <details data-category="testing security">
     <summary>Python Projects</summary>
     <b><u>Project 1: Console Project: To-Do List Manager</u></b>
 	    <ul>
@@ -103,7 +133,7 @@
 		</ul>
 	</details>
 
-  <details id="bash-analyzer">
+  <details data-category="security">
     <summary>Automated Auth Log Analyzer – Bash Script</summary>
     <ul>
       <li>Created a bash script that parses /var/log/auth.log to count failed/successful logins.</li>
@@ -113,7 +143,7 @@
     🔗 <a href="https://github.com/minimthomas93/bash-script.git" target="_blank">View Project</a>
   </details>
 
-    <details id="bash-analyzer">
+   <details data-category="testing security">
     <summary>Penetration Testing Tasks using Python</summary>
     <ul>
     <li><b>Task 1:</b> Enumerate Subdomains- Add subdomains to a list, Make it a http url, and Send request and check the subdomain exists. 
@@ -130,13 +160,11 @@
       <a href="https://github.com/minimthomas93/minimthomas93.github.io/blob/main/portscan.py" target="_blank">Click for Script</a> 
     </li>
       
-
     </ul>
     <p><strong>Technologies:</strong>· Python · Powershell · Shell script · Programming </p>
   </details>
 
-
-  <details id="sql-lab">
+<details data-category="testing security">
     <summary>SQL Injection</summary>
     <ul>
       <li>Solved 10+ SQL injection challenges and retrieved hidden data.</li>
@@ -146,7 +174,8 @@
     🔗 <a href="https://github.com/minimthomas93/sql_injection_demo.git" target="_blank">View Demo</a>
   </details>
 
-  <details id="xss">
+	
+ <details data-category="testing security">
     <summary>Cross-Site Scripting (XSS)</summary>
     <ul>
       <li>Completed 10+ PortSwigger labs covering reflected, stored, and DOM XSS.</li>
@@ -156,7 +185,7 @@
     🔗 <a href="https://github.com/minimthomas93/cross_site_scripting.git" target="_blank">View Demo</a>
   </details>
 
-  <details id="soc">
+  <details data-category="security">
     <summary>SOC Analyst Simulation</summary>
     <ul>
       <li>Monitored security alerts using SIEM tools.</li>
@@ -166,7 +195,7 @@
     🔗 <a href="https://github.com/minimthomas93/SOC_Analysis_Simulation.git" target="_blank">View Demo</a>
   </details>
 
-  <details id="homelab">
+  <details data-category="security">
     <summary>Cybersecurity Home Lab</summary>
     <ul>
       <li>Configured attacker (Kali) and target (Ubuntu) VMs using VirtualBox.</li>
@@ -176,33 +205,54 @@
     🔗 <a href="https://github.com/minimthomas93/homeLab.git" target="_blank">View Demo</a>
   </details>
 
-  <details id="telstra">
+  <details data-category="security">
     <summary>Firewall attack simulation - Virtual Internship</summary>
     <p>Simulated DDoS attack response: analyzed logs, mitigated threats, and created postmortem reports.</p>
     <p><strong>Technologies:</strong> Log Analysis · Firewall Rule · Communication</p>
     🔗 <a href="https://minimthomas93.github.io/certifications.html" target="_blank">View Certificate</a>
   </details>
 
-  <details id="mastercard">
+  <details data-category="security">
     <summary>Phishing email Simulation - Virtual Internship</summary>
     <p>Performed phishing analysis and awareness design as part of Mastercard’s Virtual Experience Program.</p>
     <p><strong>Technologies:</strong> Phishing Simulation · Threat Analysis · Communication</p>
     🔗 <a href="https://minimthomas93.github.io/certifications.html" target="_blank">View Certificate</a>
   </details>
 
-  <details id="deloitte">
+  <details data-category="security">
     <summary>Log analysis simulation - Virtual Internship</summary>
     <p>Investigated suspected security breach, analyzed web activity logs, and identified automated attack patterns.</p>
     <p><strong>Technologies:</strong> Log Analysis · Pattern Recognition · Cybersecurity Investigation</p>
     🔗 <a href="https://minimthomas93.github.io/certifications.html" target="_blank">View Certificate</a>
   </details>
 
-  <details id="ikev2">
+  <details data-category="security">
     <summary> Tamarin Model of IKEv2 Protocol</summary>
     <p>Formally modeled IKEv2 protocol using Tamarin Prover to verify key secrecy and message agreement.</p>
     <p><strong>Technologies:</strong> Tamarin Prover · Cryptographic Protocols</p>
     🔗 <a href="https://github.com/minimthomas93/ikev2_tamarin_model.git" target="_blank">View Code on GitHub</a>
   </details>
+
+
+	<script>
+function showTab(category) {
+  const tabs = document.querySelectorAll('.tab');
+  const projects = document.querySelectorAll('details');
+
+  tabs.forEach(tab => tab.classList.remove('active'));
+  document.querySelector(`button[onclick="showTab('${category}')"]`)
+    .classList.add('active');
+
+  projects.forEach(project => {
+    const categories = project.getAttribute('data-category');
+
+    project.style.display =
+      category === 'all' || (categories && categories.includes(category))
+        ? 'block'
+        : 'none';
+  });
+}
+</script>
 
 </main>
 
