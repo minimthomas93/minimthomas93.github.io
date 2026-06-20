@@ -35,6 +35,7 @@
 <div class="tabs">
   <button class="tab active" onclick="showTab('all')">All Projects</button>
   <button class="tab" onclick="showTab('testing')">Testing Projects</button>
+  <button class="tab" onclick="showTab('ai-testing')">AI in Testing- Projects</button>
   <button class="tab" onclick="showTab('security')">Cybersecurity Projects</button>
 </div>
 
@@ -72,6 +73,24 @@
 
   <!-- Collapsible Project Sections -->
 
+	<details data-category="ai-testing">
+  <summary>AI-Powered Test Case Generator</summary>
+  <p>
+    Built a Python tool that automatically generates structured test cases 
+    from any requirements document (BRD, User Story, or plain text) using 
+    the Google Gemini AI API — reducing manual test case writing from 
+    3-5 hours to under 60 seconds.
+  </p>
+  <ul>
+    <li>Reads any requirements document as input — BRD, User Story, or plain text</li>
+    <li>Uses prompt engineering to instruct AI to generate positive, negative, boundary and edge test cases</li>
+    <li>Parses AI response and exports 50+ structured test cases to a ready-to-use Excel file</li>
+    <li>Demonstrates how AI can eliminate repetitive manual work in the testing lifecycle</li>
+  </ul>
+  <p><strong>Technologies:</strong> Python · Google Gemini API · OpenPyXL · Prompt Engineering</p>
+  🔗 <a href="https://github.com/minimthomas93/ai-testcase-generator" target="_blank">View Code on GitHub</a>
+</details>
+	
 	  <details data-category="testing">
     <summary>Thesis: Coreografa - An automation testing Framework for performance comparison</summary>
     <p>Developing a feedback-directed framework to simulate adversarial input generation and uncover system vulnerabilities to support efficient and scalable penetration testing and performance testing processes.</p>
