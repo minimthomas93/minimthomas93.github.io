@@ -34,9 +34,9 @@
 
 <div class="tabs">
   <button class="tab active" onclick="showTab('all')">All Projects</button>
-  <button class="tab" onclick="showTab('testing')">Testing Projects</button>
-  <button class="tab" onclick="showTab('ai-testing')">AI in Testing- Projects</button>
-  <button class="tab" onclick="showTab('security')">Cybersecurity Projects</button>
+  <button class="tab" onclick="showTab('testing')">Testing</button>
+  <button class="tab" onclick="showTab('ai-testing')">AI in Testing</button>
+  <button class="tab" onclick="showTab('security')">Cybersecurity</button>
 </div>
 
 	<style>
@@ -44,7 +44,7 @@
   display: flex;
   gap: 12px;
   margin-bottom: 20px;
-  white-space: nowrap;
+  flex-wrap: wrap;
   overflow-x: auto;
 }
 
@@ -78,11 +78,11 @@
   <p>
     Built a Python tool that automatically generates structured test cases 
     from any requirements document (BRD, User Story, or plain text) using 
-    the Google Gemini AI API — reducing manual test case writing from 
+    the Google Gemini AI API - reducing manual test case writing from 
     3-5 hours to under 60 seconds.
   </p>
   <ul>
-    <li>Reads any requirements document as input — BRD, User Story, or plain text</li>
+    <li>Reads any requirements document as input - BRD, User Story, or plain text</li>
     <li>Uses prompt engineering to instruct AI to generate positive, negative, boundary and edge test cases</li>
     <li>Parses AI response and exports 50+ structured test cases to a ready-to-use Excel file</li>
     <li>Demonstrates how AI can eliminate repetitive manual work in the testing lifecycle</li>
