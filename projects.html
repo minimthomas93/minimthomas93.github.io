@@ -74,7 +74,8 @@
   <!-- Collapsible Project Sections -->
 
 	<details data-category="ai-testing">
-  <summary>AI-Powered Test Case Generator</summary>
+  <summary>AI-Powered Test Case Generator
+  <span class="ai-badge">🤖 AI in Testing</span></summary>
   <p>
     Built a Python tool that automatically generates structured test cases 
     from any requirements document (BRD, User Story, or plain text) using 
@@ -91,8 +92,33 @@
   🔗 <a href="https://github.com/minimthomas93/ai-testcase-generator" target="_blank">View Code on GitHub</a>
 </details>
 
+  <details data-category="ai-testing">
+    <summary>
+      AI-Powered Playwright Script Generator
+      <span class="ai-badge">🤖 AI in Testing</span>
+    </summary>
+    <p>
+      Built a Python tool that automatically generates a complete Playwright test framework
+      from a URL and test scenarios — including page objects, test data, and test scripts 
+	  using the Google Gemini AI API. Reduces framework setup from 4–6 hours to under 2 minutes.
+    </p>
+    <ul>
+      <li>Accepts only a URL and test scenarios as input - no locators or manual setup needed</li>
+      <li>Automatically fetches the page HTML and extracts interactive elements using BeautifulSoup</li>
+      <li>AI generates real locators, a Page Object Model class, test data JSON, and Playwright test scripts</li>
+      <li>Uses a 3-step AI pipeline - test data first, then page object, then test script — ensuring consistency across all files</li>
+      <li>Includes a setup script that automatically installs Playwright and configures the test environment</li>
+      <li>Generated scripts follow enterprise standards with data-driven tests, Allure annotations, and console logging</li>
+    </ul>
+    <p><strong>Technologies:</strong> Python · Google Gemini API · BeautifulSoup4 · Playwright · Prompt Engineering · python-dotenv</p>
+    🔗 <a href="https://github.com/minimthomas93/ai-playwright-script-generator" target="_blank">View Code on GitHub</a>
+  </details>
+	
 		<details data-category="ai-testing">
-  <summary>AI-Powered Defect Analyzer and Bug Report Generator</summary>
+    <summary>
+      AI-Powered Defect Analyzer and Bug Report Generator
+      <span class="ai-badge">🤖 AI in Testing</span>
+    </summary>
   <p>
     Built a Python tool that automatically  analyzes defects and generates structured bug report from any input document
 	using the Google Gemini AI API - reducing manual bug report writing from 
