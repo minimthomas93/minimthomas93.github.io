@@ -76,12 +76,12 @@
 	<details data-category="ai-testing">
   <summary>AI-Powered Chatbot QA Evaluator</summary>
   <p>
-    Built a Python tool that Automatically evaluates the quality of chatbot responses using the Gemini AI API — 
+    Built a Python tool that automatically evaluates the quality of chatbot responses using the Gemini AI API — 
 	  saving QA engineers hours of manual work.
   </p>
   <ul>
     <li>Reads a testcase file with the prompt to be asked to Chatbot and expected results</li>
-    <li>Uses prompt engineering to instruct AI to send prompts from the input file to Chatbot</li>
+    <li>Uses a two-step AI pipeline - first AI acts as the chatbot, then a second AI evaluates the response</li>
     <li>Parses Chatbot response and instruct AI to evaluate the responses with the expected results</li>
 	<li>Generates a professional Word report with the details of Chatbot responses, and the evaluation results</li>
 	  <li>Report includes an evaluation summary with testcase, pass, fail and testcase scores </li>
